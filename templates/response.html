@@ -1,0 +1,10 @@
+{% for data in pics %}
+<figure class="effect-oscar  wowload fadeInUp">
+  <img src={{ static_url(data[1]) }} alt={{ data[2] }} />
+  <figcaption>
+    <h1>{{ data[2] }}</h1><br>
+    <p> Light's Imagination <br><br>
+      <a href={{ static_url(data[1]) }} title={{ data[0] }} data-gallery>View more</a></p>
+  </figcaption>
+</figure>
+{% end %}

@@ -1,0 +1,354 @@
+@media (max-width:1525px) {
+  .testimonials_area .owl-prev, .testimonials_area .owl-next {
+    right: 0px;
+  }
+}
+
+@media (max-width:1199px) {
+
+  /* Main Menu Area css
+	============================================================================================ */
+  .header_area .navbar .search {
+    margin-left: 30px;
+  }
+
+  /* End Main Menu Area css
+	============================================================================================ */
+  /* Home Banner Area css
+	============================================================================================ */
+  .home_banner_area {
+    min-height: 700px;
+  }
+
+  .home_banner_area .banner_inner {
+    min-height: 700px;
+  }
+
+  .home_banner_area .banner_inner .banner_content {
+    margin-top: 50px;
+  }
+
+  /* End Home Banner Area css
+	============================================================================================ */
+}
+
+@media (max-width:991px) {
+
+  /* Main Menu Area css
+	============================================================================================ */
+  .navbar-toggler {
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+    cursor: pointer;
+    margin-top: 27px;
+    margin-bottom: 23px;
+  }
+
+  .header_area .navbar {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] span:first-child {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 7.5px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] span:last-child {
+    transform: rotate(45deg);
+    bottom: 6px;
+    position: relative;
+  }
+
+  .navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fcdc00;
+    margin: auto;
+    margin-bottom: 4px;
+    transition: all 400ms linear;
+    cursor: pointer;
+  }
+
+  .navbar .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nav {
+    padding: 0px 0px;
+  }
+
+  .header_top .nav {
+    padding: 0px;
+  }
+
+  .header_area .navbar .nav .nav-item .nav-link {
+    line-height: 35px;
+    margin-right: 0px;
+    display: block;
+    border-bottom: 1px solid #ededed33;
+    border-radius: 0px;
+  }
+
+  .header_area .navbar .search {
+    margin-left: 0px;
+  }
+
+  .header_area .navbar-collapse {
+    max-height: 340px;
+    overflow-y: scroll;
+  }
+
+  .header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
+    padding: 0px 15px;
+  }
+
+  .header_area .navbar .nav .nav-item {
+    margin-right: 0px;
+  }
+
+  /* End Main Menu Area css
+	============================================================================================ */
+  .c_feedback_text {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
+  .news_widget .input-group .sub-btn {
+    padding: 0px 12px;
+  }
+
+  .footer_inner .col-lg-2 {
+    margin-top: 30px;
+  }
+
+  /* Blog page Area css
+	============================================================================================ */
+  .categories_post img {
+    width: 100%;
+  }
+
+  .blog_categorie_area .col-lg-4 {
+    margin-top: 30px;
+  }
+
+  .blog_area {
+    padding-bottom: 80px;
+  }
+
+  .single-post-area .blog_right_sidebar {
+    margin-top: 30px;
+  }
+
+  /* End Blog page Area css
+	============================================================================================ */
+  /* Contact Page Area css
+	============================================================================================ */
+  .contact_info {
+    margin-bottom: 50px;
+  }
+
+  /* End Contact page Area css
+	============================================================================================ */
+  .testimonials_area .owl-prev {
+    bottom: 20px;
+    transform: rotate(-90deg);
+    left: 50%;
+    right: auto;
+    margin-left: -45px;
+  }
+
+  .testimonials_area .owl-next {
+    bottom: 20px;
+    transform: rotate(-90deg);
+    left: auto;
+    right: 50%;
+    top: auto;
+    margin-right: -45px;
+  }
+
+  .categories_post {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:767px) {
+
+  /* Blog Page Area css
+	============================================================================================ */
+  .blog_banner .banner_inner .blog_b_text h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  /* End Blog Page Area css
+	============================================================================================ */
+}
+
+@media (max-width:575px) {
+
+  /* Home Banner Area css
+	============================================================================================ */
+  .home_banner_area .banner_inner .banner_content h2 {
+    font-size: 28px;
+  }
+
+  .home_banner_area {
+    min-height: 500px;
+  }
+
+  .home_banner_area .banner_inner {
+    min-height: 500px;
+  }
+
+  /* End Home Banner Area css
+	============================================================================================ */
+  .p_120 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .isotope_fillter .gallery_filter li a {
+    padding: 0px 0px;
+    display: block;
+  }
+
+  .isotope_fillter .gallery_filter li {
+    width: calc(100% / 4);
+  }
+
+  .h_gallery_item {
+    max-width: 383px;
+    margin: 0px auto 30px;
+  }
+
+  .testimonials_area .owl-prev, .testimonials_area .owl-next {
+    z-index: 3;
+  }
+
+  .instagram_image a {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+
+  .news_widget {
+    padding-left: 0px;
+  }
+
+  .footer_inner .col-sm-6 {
+    margin-bottom: 30px;
+  }
+
+  .footer_inner .col-lg-2 {
+    margin-top: 0px;
+  }
+
+  .news_widget .input-group .sub-btn {
+    right: 42px;
+    position: relative;
+  }
+
+  .news_widget .input-group input {
+    padding: 0px 48px 0px 15px;
+  }
+
+  .find_inner .find_text .find_text_inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0px;
+  }
+
+  .find_inner .find_text {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .main_title h2 {
+    font-size: 25px;
+  }
+
+  /* Elements Area css
+	============================================================================================ */
+  .sample-text-area {
+    padding: 70px 0 70px 0;
+  }
+
+  /* End Elements Area css
+	============================================================================================ */
+  /* Blog Page Area css
+	============================================================================================ */
+  .blog_details h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .blog_banner .banner_inner .blog_b_text h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  /* End Blog Page Area css
+	============================================================================================ */
+}
+
+@media (max-width:480px) {
+
+  /* Main Menu Area css
+	============================================================================================ */
+  .header_area .navbar-collapse {
+    max-height: 250px;
+  }
+
+  /* End Main Menu Area css
+	============================================================================================ */
+  /* Home Banner Area css
+	============================================================================================ */
+  .home_banner_area .banner_inner .banner_content {
+    padding: 30px 15px;
+  }
+
+  /* End Home Banner Area css
+	============================================================================================ */
+  .isotope_fillter .gallery_filter li a {
+    font-size: 10px;
+  }
+
+  .t_slider .item .media {
+    display: block;
+  }
+
+  .owl-carousel .owl-item img {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .instagram_image a {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .banner_area .banner_inner .banner_content h2 {
+    font-size: 40px;
+  }
+
+  /* Blog Page Area css
+	============================================================================================ */
+  .comments-area .thumb {
+    margin-right: 10px;
+  }
+
+  /* End Blog Page Area css
+	============================================================================================ */
+}

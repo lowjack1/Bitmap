@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  {% block head%}
+  <title>Bitmap</title>
+  {% end %}
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+
+  <!-- font awesome -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="{{ static_url("assets/bootstrap/css/bootstrap.min.css") }}" />
+
+  <!-- animation -->
+  <link rel="stylesheet" href="{{ static_url("assets/animate/animate.css") }}" />
+  <link rel="stylesheet" href="{{ static_url("assets/animate/set.css") }}" />
+
+  <!-- gallery -->
+  <link rel="stylesheet" href="{{ static_url("assets/gallery/blueimp-gallery.min.css") }}">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ static_url("images/favicon.jpg") }}" type="image/x-icon">
+  <link rel="icon" href="{{ static_url("images/favicon.jpg") }}" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="{{ static_url("assets/css/styles.css") }}">
+
+
+  <!-- Add External CSS -->
+  <link rel="stylesheet" href="{{ static_url("assets/css/bootstrap.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/vendors/linericon/style.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/css/font-awesome.min.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/vendors/owl-carousel/owl.carousel.min.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/vendors/lightbox/simpleLightbox.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/vendors/nice-select/css/nice-select.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/vendors/animate-css/animate.css") }}">
+  <!-- main css -->
+  <link rel="stylesheet" href="{{ static_url("assets/css/style.css") }}">
+  <link rel="stylesheet" href="{{ static_url("assets/css/responsive.css") }}">
+
+  <!-- End -->
+</head>
+
+<body>
+  {% block content %}
+
+  {% end %}
+  <!-- Footer Starts -->
+  <div class="footer text-center spacer">
+    <p class="wowload flipInX">
+      <a href="https://www.facebook.com">
+        <i class="fa fa-facebook fa-2x"> </i>
+      </a>
+      <a href="http://www.instagram.com">
+        <i class="fa fa-instagram fa-2x"> </i>
+      </a>
+      <a href="https://www.twitter.com">
+        <i class="fa fa-twitter fa-2x"> </i>
+      </a>
+      <a href="http://www.flicker.com">
+        <i class="fa fa-flickr fa-2x"> </i>
+      </a>
+    </p>
+    Copyright 2019 Light Creative Studio. All rights reserved.
+  </div>
+  <!-- # Footer Ends -->
+
+  <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">Title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+  </div>
+
+  <!-- jquery -->
+  <script src="{{ static_url("assets/js/jquery.js") }}"></script>
+
+  <!-- wow script -->
+  <script src="{{ static_url("assets/wow/wow.min.js") }}"></script>
+
+  <!-- boostrap -->
+  <script src="{{ static_url("assets/bootstrap/js/bootstrap.js") }}" type="text/javascript"></script>
+
+  <!-- jquery mobile -->
+  <script src="{{ static_url("assets/respond/respond.js") }}"></script>
+
+  <!-- gallery -->
+  <script src="{{ static_url("assets/gallery/jquery.blueimp-gallery.min.js") }}"></script>
+
+  <!-- custom script -->
+  <script src="{{ static_url("assets/js/script.js") }}"></script>
+
+  <!-- External js -->
+  <script src="{{ static_url("assets/js/jquery-3.2.1.min.js") }}"></script>
+  <script src="{{ static_url("assets/js/popper.js") }}"></script>
+  <script src="{{ static_url("assets/js/bootstrap.min.js") }}"></script>
+  <script src="{{ static_url("assets/js/stellar.js") }}"></script>
+  <script src="{{ static_url("assets/vendors/lightbox/simpleLightbox.min.js") }}"></script>
+  <script src="{{ static_url("assets/vendors/nice-select/js/jquery.nice-select.min.js") }}"></script>
+  <script src="{{ static_url("assets/vendors/isotope/imagesloaded.pkgd.min.js") }}"></script>
+  <script src="{{ static_url("assets/vendors/isotope/isotope-min.js") }}"></script>
+  <script src="{{ static_url("assets/vendors/owl-carousel/owl.carousel.min.js") }}"></script>
+  <script src="{{ static_url("assets/js/jquery.ajaxchimp.min.js") }}"></script>
+  <script src="{{ static_url("assets/js/mail-script.js") }}"></script>
+  <script src="{{ static_url("assets/js/theme.js") }}"></script>
+  {% block jsscript %}
+  {% end %}
+</body>
+
+</html>
