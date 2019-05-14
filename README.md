@@ -15,17 +15,20 @@
 ## How to make webapp functional:
 Assuming Google Chrome and Python3 is installed in your system.
 * Clone Bitmap repository in your home directory.
-* Install tornado and other requirements <br />
+* Install tornado and other dependencies <br />
 `pip3 -r install requirement.txt`<br>
-* Install MySQL server`
-* Now run the server. <br />
-`pip3 manage.py runserver`
+* Install PostgreSQL server`
+* Now goto the Bitmap-Tornado folder and run this Command. <br />
+`python3 app.py syncdb`
+* Make the app functional by
+`python3 app.py`
 
 ## It will look something like this
-![Image](https://github.com/lowjack1/Bitmap/blob/master/Gallery/Gallery/Gallery/static/images/img1.png) <br /><br />
-![Image](https://github.com/lowjack1/Bitmap/blob/master/Gallery/Gallery/Gallery/static/images/img2.png) <br /><br />
-![Image](https://github.com/lowjack1/Bitmap/blob/master/Gallery/Gallery/Gallery/static/images/img3.png) <br /><br />
-![Image](https://github.com/lowjack1/Bitmap/blob/master/Gallery/Gallery/Gallery/static/images/img4.png) <br /><br />
-![Image](https://github.com/lowjack1/Bitmap/blob/master/Gallery/Gallery/Gallery/static/images/img5.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/1.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/2.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/3.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/4.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/5.png) <br /><br />
+![Image](https://github.com/lowjack1/Bitmap-Tornado/blob/master/static/images/Screenshots/6.png) <br /><br />
 
 
