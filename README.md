@@ -2,7 +2,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-### This is a full stack web application which contains various Images.
+### This is a full stack web application which contains variety of Images.
 
 ## Technology Stack:
 * PostgreSQL
