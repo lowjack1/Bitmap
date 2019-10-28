@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Bitmap</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+<script type="text/javascript">
+  $(function() {
+    $('#more').bind('click', function(e) {
+      e.preventDefault();
+      $.ajax({
+        'url': 'more',
+        'type': 'GET',
+        'success': function(data) {
+          $('#works').append(data);
+        }
+      });
+    });
+  });
+
+  $(function() {
+    $('#sa').bind('click', function(e) {
+      var tosearch = document.getElementsByName('serchbar')[0].value;
+      document.getElementsByName('serchbar')[0].value=""; 
+      e.preventDefault();
+      $.ajax({
+        'url': 'search?search='+tosearch,
+        'type': 'GET',
+        'success': function(data) {
+          $('#works').html(data);
+        }
+      });
+    });
+  });
+</script>
+<style type="text/css">
+  .loader {
+    border: 13px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 13px solid #4169E1;
+    border-bottom: 13px solid #4169E1;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #9E9E9E;
+    border-radius: 30px;
+    padding: 10px;
+  }
+
+  .search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    font: Josefin Sans, Arial, Helvetica;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:auto;
+    transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+  }
+
+  .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+  }
+
+  ::placeholder {
+    color:black;
+    font: Josefin Sans, Arial, Helvetica;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 1;
+  }
+</style>
+{% end %}
+
+
+{% block content %}
+<div id="home">
+  <div class="banner">
+    <header class="header_area">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="home"><img src="{{ static_url("images/logo.png") }}" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item active"><a class="nav-link" style="background: transparent;" href="home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="about">About</a></li>
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <img src="{{ static_url("images/back.jpg") }}" alt="banner" class="img-responsive">
+    <div class="caption">
+      <div class="caption-wrapper">
+        <div class="caption-info">
+          <h1>Photography is the beauty of life captured</h1> <br><br>
+          <p>
+            Photography has no rules, it is not a sport. <br>
+            It is the result which counts, no matter how it is achieved.
+          </p>
+          <div class="d-flex justify-content-center" style = "margin-top: 5%">
+            <div class="searchbar">
+              <input class="search_input" type="text" name="serchbar" placeholder="Search ...">
+              <a id = "sa" href = "" class="search_icon">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-left:5px;margin-right:5px;">
+  <!-- works -->
+  <div id="works" class=" clearfix grid">
+    {% for data in pics %}
+    <figure class="effect-oscar  wowload fadeInUp">
+      <img src={{ static_url(data[1]) }} alt={{ data[2] }} />
+      <figcaption>
+        <h1>{{ data[2] }}</h1><br>
+        <p> Light's Imagination <br><br>
+          <a href={{ static_url(data[1]) }} title={{ data[0] }} data-gallery>View more</a></p>
+      </figcaption>
+    </figure>
+    {% end %}
+  </div>
+</div>
+
+<div style="float:left;width:100%;text-align:center;margin-top:1%;margin-bottom:2%;">
+  <h3> <strong>
+      <a href="" id="more">
+        <font color="#00FF00"> More </font>
+      </a>
+    </strong> </h3>
+</div>
+{% end %}

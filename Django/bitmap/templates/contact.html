@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenet %}
+<title> Contact </title>
+{% endblock %}
+
+{% block content %}
+<div id="home">
+  <div class="banner">
+    <header class="header_area">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="{% url 'home' %}">Home</a></li>
+
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="{% url 'aboutus' %}">About</a></li>
+              <li class="nav-item active"><a class="nav-link" style="background: transparent;" href="{% url 'contactus' %}">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="background: transparent;">
+              <li class="nav-item"><a href="#" class="search" style="background: transparent;"><i class="lnr lnr-magnifier"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <img src="{% static 'images/back2.jpg' %}" alt="banner" class="img-responsive">
+    <div class="caption">
+      <div class="caption-wrapper">
+        <div class="caption-info">
+          <div class="caption-info">
+            <h1 style="padding-top: 23%;padding-bottom: 0%;">Every image is a triumph of perseverance.</h1>
+          </div>
+          <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+              <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+              <div class="container">
+                <div class="banner_content text-center">
+                  <h1>Contact Us</h1>
+                  <div class="page_link">
+                    <a href="{% url 'home' %}">Home </a>
+                    <a href="{% url 'contactus' %}">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--================Contact Area =================-->
+<section class="contact_area p_120">
+  <div class="container">
+    <div id="mapBox" class="mapBox">
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="contact_info">
+          <div class="info_item" style="color:white;">
+            <i class="lnr lnr-home"></i>
+            <h6 style="color:white;">Lucknow, India</h6>
+            <p>Santa Monica Bullevard</p>
+          </div>
+          <div class="info_item" style="color:white;">
+            <i class="lnr lnr-phone-handset"></i>
+            <h6><a href="" style="color:white;">+91 9383944290</a></h6>
+            <p>Mon to Fri 9 AM to 6 PM</p>
+          </div>
+          <div class="info_item" style="color:white;">
+            <i class="lnr lnr-envelope"></i>
+            <h6><a href="" style="color:white;">light@gallery.com</a></h6>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <form class="row contact_form" action="{% url 'post' %}" method="post" id="contactForm" novalidate="novalidate" style="color:green;"> {% csrf_token %}
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" style="color:black;">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" style="color:black;">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" style="color:black;">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="message" rows="1" placeholder="Feedback" style="color:black;"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12 text-right">
+            <button type="submit" value="submit" class="btn theme_btn button_hover">Send Feedback</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================Contact Area =================-->
+{% endblock %}
+{% block jsscript %}
+<!-- contact js -->
+<script src="{% static 'assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'assets/js/contact.js' %}"></script>
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSDMa2aLGyIkWhXWQyc-daKvHeC4LJCM"></script>
+<script>
+  var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var labelIndex = 0;
+
+  function initialize() {
+    var lucknow = {
+      lat: 26.8533985,
+      lng: 80.939496
+    };
+    var map = new google.maps.Map(document.getElementById('mapBox'), {
+      zoom: 12,
+      center: lucknow
+    });
+
+    google.maps.event.addListener(map, 'click', function(event) {
+      addMarker(event.latLng, map);
+    });
+    addMarker(lucknow, map);
+  }
+
+  function addMarker(location, map) {
+
+    var marker = new google.maps.Marker({
+      position: location,
+      label: labels[labelIndex++ % labels.length],
+      map: map
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script src="{% static 'assets/js/gmaps.min.js' %}"></script>
+<script src="{% static 'assets/js/theme.js' %}"></script>
+{% endblock %}

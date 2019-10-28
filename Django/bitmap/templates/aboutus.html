@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head%}
+<title>About us</title>
+{% endblock %}
+
+{% block content %}
+<div id="home">
+  <div class="banner">
+    <header class="header_area">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="{% url 'home' %}">Home</a></li>
+
+              <li class="nav-item active"><a class="nav-link" style="background: transparent;" href="{% url 'aboutus' %}">About</a></li>
+              <li class="nav-item"><a class="nav-link" style="background: transparent;" href="{% url 'contactus' %}">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="background: transparent;">
+              <li class="nav-item"><a href="#" class="search" style="background: transparent;"><i class="lnr lnr-magnifier"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <img src="{% static 'images/back4.jpg' %}" alt="banner" class="img-responsive">
+    <div class="caption">
+      <div class="caption-wrapper">
+        <div class="caption-info">
+          <div class="caption-info">
+            <h1 style="padding-top: 23%;padding-bottom: 0%;">Photography is an austere & blazing poetry of the real.</h1>
+          </div>
+          <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+              <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+              <div class="container">
+                <div class="banner_content text-center">
+                  <h1>About Us</h1>
+                  <div class="page_link">
+                    <a href="{% url 'home' %}">Home </a>
+                    <a href="{% url 'aboutus' %}">About us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="color:white;text-align:left;margin-top: 10%; margin-left: 5%; margin-right: 45%; margin-bottom: 6%;">
+  <h1>Story About Us</h1>
+  <h5 style="font-style:italic;color:white;font-size: 18px;font-family: 'Crimson Text', serif;font-weight: 400;">
+    " We are born at a given moment, in a given place and, like vintage years of photography, we have the qualities of
+    the year and of the season of which we are born. Astrology does not lay claim to anything more."
+  </h5>
+  <br>
+
+  <hr align="center" width="20%" color="#FFFFFF">
+  <br><br> <br>
+  <h6 style="color:#D3D3D3;font-weight: normal;">
+    Welcome to <a href="{% url 'home' %}" style="color:#FDFEFE"> Bitmap </a>, your number one source for all kind of photos. We're dedicated to giving you the very best of pictures of all kind.
+    Bitmap was Founded in 2019 by Light, it has come a long way from its beginnings in a toolshed, Houston, TX. When Light first started out, his passion for photography drove him to quit his day job,
+    and gave him the impetus to turn hard work and inspiration into to a booming online store. We now serve customers all over the India, and are thrilled to be a part of the fair trade wing of the
+    fashion industry.
+    <br><br>
+    We hope you enjoy our service as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to <a href="{% url 'contactus' %}" style="color:#FDFEFE;">contact us.
+  </h6>
+</div>
+{% endblock %}
